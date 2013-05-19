@@ -1,0 +1,9 @@
+Installation automatique du serveur téléphonique ITC:
+
+Script fonctionne sur Debian 6
+
+- Lancer un terminal en root et taper les lignes de commandes suivantes.
+
+wget https://github.com/itcomputer/server-phone/blob/master/asterisk-autoinstall.sh
+chmod +x asterisk-autoinstall.sh
+./asterisk-autoinstall.sh

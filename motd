@@ -1,0 +1,25 @@
+Bienvenue sur le serveur ITCPBX
+
+ITCPBX est basé sous la distribution Debian 7 64bits.
+
+Version: 1.0
+MAJ le 16/08/13 par LAUNAY Alexis.
+
+Liste des commandes:
+-----------------------------------------------------------------------------
+maj-pbxitc      	  Pour mettre à jours le serveur ITCPBX.
+configure-timezone  Modification du timezone.
+ip-network          Editer le fichier de configuration de l'interface réseau
+config-vpn          Configuration du vpn, adresse ip du serveur et plage d'adresse IP
+config-client-vpn   Configuration des clients pour le VPN, mot de passe, id, etc.
+start-vpn           Démarrage du service VPN
+stop-vpn            Arrêt du service VPN
+config-extensions   Editer le fichier extensions.conf
+config-users        Editer le fichier users.conf
+config-sip          Editer le fichier sip.conf
+config-voicemail    Editer le fichier voicemail.conf
+config-music        Editer le fichier musiconhold.conf
+parefeu-on          Activer le Pare-feu
+parefeu-off         Désactiver le Pare-feu
+reboot              Redémarre le serveur ITCPBX
+

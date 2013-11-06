@@ -2,18 +2,6 @@
 #Script de MAJ pour l'IPBX d'ITC
 #Alexis LAUNAY configuration ITC.
 #Site internet: www.itcomputer.fr
-## MAJ Version 1.0 le 16/08/2013
-
-#Installation d'un serveur VNC
-#MAJ + Dépendances
-#
-
-#echo "MAJ de raspbx"
-#sleep 2
-#mv /root/pptpd-options /etc/ppp/pptpd-options
-#mv /root/sysctl.conf /etc/sysctl.conf
-#sysctl -p
-#Voir si vraiment utilie
 
 echo "Modification version et message d'accueil SSH"
 sleep 2

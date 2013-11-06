@@ -8,11 +8,11 @@
 #MAJ + Dépendances
 #
 
-echo "MAJ de raspbx"
-sleep 2
-mv /root/pptpd-options /etc/ppp/pptpd-options
-mv /root/sysctl.conf /etc/sysctl.conf
-sysctl -p
+#echo "MAJ de raspbx"
+#sleep 2
+#mv /root/pptpd-options /etc/ppp/pptpd-options
+#mv /root/sysctl.conf /etc/sysctl.conf
+#sysctl -p
 #Voir si vraiment utilie
 
 echo "Modification version et message d'accueil SSH"
@@ -35,7 +35,7 @@ apt-get -y install libwww-perl
 apt-get -y install sox mpg123
 apt-get -y install zip
 apt-get -y install pptpd
-apt-get -y install openvpn
+#apt-get -y install openvpn
 apt-get -y install tightvncserver
 apt-get -y install ufw
 apt-get -y install gufw
@@ -45,35 +45,35 @@ apt-get -y install fbi
 apt-get -y install build-essential libxml2-dev libncurses5-dev linux-headers-`uname -r` libsqlite3-dev libssl-dev perl libwww-perl sox mpg123 zip pptpd openvpn tightvncserver ufw gufw fbi
 
 
-echo "Installation de No-IP"
-sleep 2
+#echo "Installation de No-IP"
+#sleep 2
 #Voir pour no-ip
 
 
-echo "Copie des fichiers de configuration Asterisk"
-sleep 2
-cd /etc/asterisk/
-rm extensions.conf
-mv /root/sip.conf /var/www/html/admin/modules/core/etc
-mv /root/extensions.conf /var/www/html/admin/modules/core/etc
-mv /root/voicemail.conf /var/www/html/admin/modules/core/etc
-mv /root/users.conf /var/www/html/admin/modules/core/etc
-mv /root/musiconhold.conf /var/www/html/admin/modules/core/etc
-chown -R asterisk:asterisk /var/www/html/admin/modules/core/etc
-mv /root/voicemail.conf /etc/asterisk
-mv /root/users.conf /etc/asterisk
-mv /root/musiconhold.conf /etc/asterisk
-chown -R asterisk:asterisk /etc/asterisk
-mv /root/fr /var/lib/asterisk/sounds/
-mv /root/itc.mp3 /var/lib/asterisk/sounds
-mv /root/IVR-000.ulaw /var/lib/asterisk/sounds
-mv /root/IVR-001.ulaw /var/lib/asterisk/sounds
-mv /root/IVR-002.ulaw /var/lib/asterisk/sounds
-mv /root/IVR-003.ulaw /var/lib/asterisk/sounds
-mv /root/IVR-004.ulaw /var/lib/asterisk/sounds
-mv /root/IVR-005.ulaw /var/lib/asterisk/sounds
-mv /root/IVR-006.ulaw /var/lib/asterisk/sounds
-chown -R asterisk:asterisk /var/lib/asterisk/sounds
+#echo "Copie des fichiers de configuration Asterisk"
+#sleep 2
+#cd /etc/asterisk/
+#rm extensions.conf
+#mv /root/sip.conf /var/www/html/admin/modules/core/etc
+#mv /root/extensions.conf /var/www/html/admin/modules/core/etc
+#mv /root/voicemail.conf /var/www/html/admin/modules/core/etc
+#mv /root/users.conf /var/www/html/admin/modules/core/etc
+#mv /root/musiconhold.conf /var/www/html/admin/modules/core/etc
+#chown -R asterisk:asterisk /var/www/html/admin/modules/core/etc
+#mv /root/voicemail.conf /etc/asterisk
+#mv /root/users.conf /etc/asterisk
+#mv /root/musiconhold.conf /etc/asterisk
+#chown -R asterisk:asterisk /etc/asterisk
+#mv /root/fr /var/lib/asterisk/sounds/
+#mv /root/itc.mp3 /var/lib/asterisk/sounds
+#mv /root/IVR-000.ulaw /var/lib/asterisk/sounds
+#mv /root/IVR-001.ulaw /var/lib/asterisk/sounds
+#mv /root/IVR-002.ulaw /var/lib/asterisk/sounds
+#mv /root/IVR-003.ulaw /var/lib/asterisk/sounds
+#mv /root/IVR-004.ulaw /var/lib/asterisk/sounds
+#mv /root/IVR-005.ulaw /var/lib/asterisk/sounds
+#mv /root/IVR-006.ulaw /var/lib/asterisk/sounds
+#chown -R asterisk:asterisk /var/lib/asterisk/sounds
 
 
 echo "Redémarrage du serveur..."

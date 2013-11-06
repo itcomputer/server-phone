@@ -1,25 +1,47 @@
-Bienvenue sur le serveur ITCPBX
+========================================================
+=                       Version: 0.9.7.1               =
+========================================================
+= MAJ le 04/11/13 de LAUNAY Alexis, SOCIETE ITCOMPUTER =
+========================================================
 
-ITCPBX est basé sous la distribution Debian 7 64bits.
-
-Version: 1.0
-MAJ le 16/08/13 par LAUNAY Alexis.
-
-Liste des commandes:
 -----------------------------------------------------------------------------
-maj-pbxitc      	  Pour mettre à jours le serveur ITCPBX.
-configure-timezone  Modification du timezone.
-ip-network          Editer le fichier de configuration de l'interface réseau
-config-vpn          Configuration du vpn, adresse ip du serveur et plage d'adresse IP
-config-client-vpn   Configuration des clients pour le VPN, mot de passe, id, etc.
-start-vpn           Démarrage du service VPN
-stop-vpn            Arrêt du service VPN
-config-extensions   Editer le fichier extensions.conf
-config-users        Editer le fichier users.conf
-config-sip          Editer le fichier sip.conf
-config-voicemail    Editer le fichier voicemail.conf
-config-music        Editer le fichier musiconhold.conf
-parefeu-on          Activer le Pare-feu
-parefeu-off         Désactiver le Pare-feu
-reboot              Redémarre le serveur ITCPBX
-
+Commandes       Autorisations   Descriptions
+-----------------------------------------------------------------------------
+maj-pbxitc              #       Mettre a jours le serveur ITCPBX.
+change-pass                     Changer le mot de passe 'userpbx'.
+configure-timezone              Modification du timezone.
+ip-network                      Editer le fichier de config reseau.
+info-port               #       Information sur les ports a ouvrir.
+config-noip             #       Configuration compte client NO-IP.
+info-noip               #       Info sur la configuration NO-IP.
+config-vpn              #       Configuration du vpn, adresse ip et plage.
+config-client-vpn               Configuration des clients pour le VPN.
+start-vpn                       Demarrage du service VPN.
+stop-vpn                        Arret du service VPN.
+config-extensions       #       Editer le fichier extensions.
+config-users            #       Editer le fichier users.
+config-sip              #       Editer le fichier sip.
+config-voicemail        #       Editer le fichier voicemail.
+config-music            #       Editer le fichier musiconhold.
+restart-asterisk                Redemarrer les services Asterisk.
+parefeu-on              #       Activer le Pare-feu.
+parefeu-off             #       Desctiver le Pare-feu.
+info-temp                       Temperature du CPU.
+reboot-itcpbx                   Redemarrage du serveur ITCPBX.
+stop-itcpbx                     Arret du serveur ITCPBX.
+-----------------------------------------------------------------------------
+LEGENDE: # Vous devez vous connecter avec les droits Administrateur pour
+utiliser les commandes.
+-----------------------------------------------------------------------------
+MAJ: 0.9.3 = Compatible FreeBox Revoltion
+MAJ: 0.9.4 = Compatible Bouygues Bbox Sensation
+MAJ: 0.9.5 = Compatible DartyBox
+             Commande pour redemarrer les services asterisk
+MAJ: 0.9.6 = Compatible Orange Livebox/Livebox Pro
+MAJ: 0.9.7 = Correction stabilite
+MAJ: 0.9.7.1 = Amelioration du systeme de MAH
+-----------------------------------------------------------------------------
+RESTE A FAIRE:
+- Test sur connexion SFR
+- Correctifs mineurs
+- Test le systeme de MAJ auto

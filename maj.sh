@@ -5,7 +5,7 @@
 
 echo "Modification version et message d'accueil SSH"
 sleep 2
-cd /etc/motd
+cd /etc
 rm motd
 wget https://github.com/itcomputer/server-phone/blob/master/motd
 chown -R root:root /etc/motd

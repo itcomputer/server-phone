@@ -21,6 +21,23 @@ rm motd
 wget https://raw.github.com/itcomputer/server-phone/master/motd
 chown -R root:root /etc/motd
 
+echo "Modification des commandes"
+sleep 2
+cd /home/userpbx
+rm .bashrc
+wget https://raw.github.com/itcomputer/server-phone/master/.bashrc_userpbx
+mv .bashrc_userpbx .bashrc
+chown -R userpbx:userpbx /home/userpbx/.bashrc
+cd /root
+rm .bashrc
+wget https://raw.github.com/itcomputer/server-phone/master/.bashrc_root
+mv .bashrc_root .bashrc
+chown -R root:root /root/.bashrc
+cd /etc/skel
+rm .bashrc
+wget https://raw.github.com/itcomputer/server-phone/master/.bashrc_skel
+mv .bashrc_skel .bashrc
+chown -R root:root /etc/skel/.bashrc
 
 echo "Installation des dépendances"
 sleep 2
@@ -80,5 +97,3 @@ sleep 2
 reboot
 
 exit
-
-

@@ -1,7 +1,7 @@
 ========================================================
-=                       Version: 0.9.7.1               =
+=                       Version: 0.9.7.2               =
 ========================================================
-= MAJ le 04/11/13 de LAUNAY Alexis, SOCIETE ITCOMPUTER =
+= MAJ le 07/11/13 de LAUNAY Alexis, SOCIETE ITCOMPUTER =
 ========================================================
 
 -----------------------------------------------------------------------------
@@ -39,9 +39,9 @@ MAJ: 0.9.5 = Compatible DartyBox
              Commande pour redemarrer les services asterisk
 MAJ: 0.9.6 = Compatible Orange Livebox/Livebox Pro
 MAJ: 0.9.7 = Correction stabilite
-MAJ: 0.9.7.1 = Amelioration du systeme de MAH
+MAJ: 0.9.7.1 = Amelioration du systeme de MAJ + test
+MAJ: 0.9.7.2 = Modification réseau
 -----------------------------------------------------------------------------
 RESTE A FAIRE:
 - Test sur connexion SFR
 - Correctifs mineurs
-- Test le systeme de MAJ auto

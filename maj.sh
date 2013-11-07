@@ -12,7 +12,6 @@ sleep 2
 #mv /root/pptpd-options /etc/ppp/pptpd-options
 #mv /root/sysctl.conf /etc/sysctl.conf
 #sysctl -p
-#Voir si vraiment utilie
 
 echo "Modification version et message d'accueil SSH"
 sleep 2
@@ -63,7 +62,6 @@ sleep 2
 
 echo "Installation de No-IP"
 sleep 2
-#Voir pour no-ip
 
 
 echo "Copie des fichiers de configuration Asterisk"

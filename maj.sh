@@ -6,10 +6,9 @@
 
 #Installation d'un serveur VNC
 #MAJ + Dépendances
-#
 
-#echo "MAJ de raspbx"
-#sleep 2
+echo "MAJ de raspbx"
+sleep 2
 #mv /root/pptpd-options /etc/ppp/pptpd-options
 #mv /root/sysctl.conf /etc/sysctl.conf
 #sysctl -p
@@ -25,33 +24,33 @@ chown -R root:root /etc/motd
 
 echo "Installation des dépendances"
 sleep 2
-apt-get -y install build-essential
-apt-get -y install libxml2-dev
-apt-get -y install libncurses5-dev
-apt-get -y install linux-headers-`uname -r`
-apt-get -y install libsqlite3-dev
-apt-get -y install libssl-dev perl
-apt-get -y install libwww-perl
-apt-get -y install sox mpg123
-apt-get -y install zip
-apt-get -y install pptpd
+#apt-get -y install build-essential
+#apt-get -y install libxml2-dev
+#apt-get -y install libncurses5-dev
+#apt-get -y install linux-headers-`uname -r`
+#apt-get -y install libsqlite3-dev
+#apt-get -y install libssl-dev perl
+#apt-get -y install libwww-perl
+#apt-get -y install sox mpg123
+#apt-get -y install zip
+#apt-get -y install pptpd
 #apt-get -y install openvpn
-apt-get -y install tightvncserver
-apt-get -y install ufw
-apt-get -y install gufw
-apt-get -y install fbi
+#apt-get -y install tightvncserver
+#apt-get -y install ufw
+#apt-get -y install gufw
+#apt-get -y install fbi
 
 # verification des dépendances.
-apt-get -y install build-essential libxml2-dev libncurses5-dev linux-headers-`uname -r` libsqlite3-dev libssl-dev perl libwww-perl sox mpg123 zip pptpd openvpn tightvncserver ufw gufw fbi
+#apt-get -y install build-essential libxml2-dev libncurses5-dev linux-headers-`uname -r` libsqlite3-dev libssl-dev perl libwww-perl sox mpg123 zip pptpd openvpn tightvncserver ufw gufw fbi
 
 
-#echo "Installation de No-IP"
-#sleep 2
+echo "Installation de No-IP"
+sleep 2
 #Voir pour no-ip
 
 
-#echo "Copie des fichiers de configuration Asterisk"
-#sleep 2
+echo "Copie des fichiers de configuration Asterisk"
+sleep 2
 #cd /etc/asterisk/
 #rm extensions.conf
 #mv /root/sip.conf /var/www/html/admin/modules/core/etc

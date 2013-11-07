@@ -10,6 +10,7 @@ Commandes       Autorisations   Descriptions
 maj-pbxitc              #       Mettre a jours le serveur ITCPBX.
 change-pass                     Changer le mot de passe 'userpbx'.
 configure-timezone              Modification du timezone.
+reset-network                   Reset de la carte reseau.
 ip-network                      Editer le fichier de config reseau.
 info-port               #       Information sur les ports a ouvrir.
 config-noip             #       Configuration compte client NO-IP.
@@ -40,7 +41,7 @@ MAJ: 0.9.5 = Compatible DartyBox
 MAJ: 0.9.6 = Compatible Orange Livebox/Livebox Pro
 MAJ: 0.9.7 = Correction stabilite
 MAJ: 0.9.7.1 = Amelioration du systeme de MAJ + test
-MAJ: 0.9.7.2 = Modification réseau
+MAJ: 0.9.7.2 = Modification réseau + commande reset réseau
 -----------------------------------------------------------------------------
 RESTE A FAIRE:
 - Test sur connexion SFR

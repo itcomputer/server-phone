@@ -17,7 +17,7 @@ info-port                       Information sur les ports a ouvrir.
 config-noip             #       Configuration compte client NO-IP.
 info-noip               #       Info sur la configuration NO-IP.
 config-vpn              #       Configuration du vpn, adresse ip et plage.
-config-client-vpn               Configuration des clients pour le VPN.
+config-client-vpn       #       Configuration des clients pour le VPN.
 start-vpn                       Demarrage du service VPN.
 stop-vpn                        Arret du service VPN.
 config-extensions       #       Editer le fichier extensions.
@@ -25,7 +25,7 @@ config-users            #       Editer le fichier users.
 config-sip              #       Editer le fichier sip.
 config-voicemail        #       Editer le fichier voicemail.
 config-music            #       Editer le fichier musiconhold.
-restart-asterisk                Redemarrer les services Asterisk.
+restart-asterisk        #       Redemarrer les services Asterisk.
 parefeu-on              #       Activer le Pare-feu.
 parefeu-off             #       Desctiver le Pare-feu.
 info-temp                       Temperature du CPU.

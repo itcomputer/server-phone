@@ -1,7 +1,7 @@
 ========================================================
 =                       Version: 1.0.1                 =
 ========================================================
-= MAJ le 07/11/13 de LAUNAY Alexis, SOCIETE ITCOMPUTER =
+= MAJ le 11/11/13 de LAUNAY Alexis, SOCIETE ITCOMPUTER =
 ========================================================
 
 -----------------------------------------------------------------------------
@@ -35,14 +35,14 @@ stop-itcpbx                     Arret du serveur ITCPBX.
 LEGENDE: # Vous devez vous connecter avec les droits Administrateur pour
 utiliser les commandes.
 -----------------------------------------------------------------------------
-MAJ: 0.9.3 = Compatible FreeBox Revoltion
-MAJ: 0.9.4 = Compatible Bouygues Bbox Sensation
-MAJ: 0.9.5 = Compatible DartyBox
-             Commande pour redemarrer les services asterisk
-MAJ: 0.9.6 = Compatible Orange Livebox/Livebox Pro
-MAJ: 0.9.7 = Correction stabilite
+MAJ: 0.9.3   = Compatible FreeBox Revoltion
+MAJ: 0.9.4   = Compatible Bouygues Bbox Sensation
+MAJ: 0.9.5   = Compatible DartyBox
+               Commande pour redemarrer les services asterisk
+MAJ: 0.9.6   = Compatible Orange Livebox/Livebox Pro
+MAJ: 0.9.7   = Correction stabilite
 MAJ: 0.9.7.1 = Amelioration du systeme de MAJ + test
 MAJ: 0.9.7.2 = Modification reseau + commande reset réseau
-MAJ: 1.0 = Version finale plus en Beta
-MAJ: 1.0.1 = Commande pour interface reseau
+MAJ: 1.0     = Version finale plus en Beta
+MAJ: 1.0.1   = Commande pour interface reseau
 -----------------------------------------------------------------------------

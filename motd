@@ -1,5 +1,5 @@
 ========================================================
-=                       Version: 1.0                   =
+=                       Version: 1.0.1                 =
 ========================================================
 = MAJ le 07/11/13 de LAUNAY Alexis, SOCIETE ITCOMPUTER =
 ========================================================
@@ -10,6 +10,7 @@ Commandes       Autorisations   Descriptions
 maj-pbxitc              #       Mettre a jours le serveur ITCPBX.
 change-pass                     Changer le mot de passe 'userpbx'.
 configure-timezone              Modification du timezone.
+info-interface                  Information interface reseau.
 reset-network                   Reset de la carte reseau.
 ip-network                      Editer le fichier de config reseau.
 info-port               #       Information sur les ports a ouvrir.

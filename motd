@@ -13,7 +13,7 @@ configure-timezone              Modification du timezone.
 info-interface                  Information interface reseau.
 reset-network                   Reset de la carte reseau.
 ip-network                      Editer le fichier de config reseau.
-info-port               #       Information sur les ports a ouvrir.
+info-port                       Information sur les ports a ouvrir.
 config-noip             #       Configuration compte client NO-IP.
 info-noip               #       Info sur la configuration NO-IP.
 config-vpn              #       Configuration du vpn, adresse ip et plage.

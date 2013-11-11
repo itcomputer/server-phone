@@ -110,7 +110,6 @@ if ! shopt -oq posix; then
 fi
 
 alias ip-network='nano /etc/network/interfaces'
-alias config-client-vpn='nano /etc/ppp/chap-secrets'
 alias start-vpn='/etc/init.d/pptpd start'
 alias stop-vpn='/etc/init.d/pptpd stop'
 alias info-temp='/opt/vc/bin/vcgencmd measure_temp'
@@ -118,6 +117,5 @@ alias change-pass='passwd userpbx'
 alias stop-itcpbx='shutdown -h now'
 alias reboot-itcpbx='reboot'
 alias info-port='nano /etc/asterisk/info-port.conf'
-alias restart-asterisk='amportal restart'
 alias reset-network='/etc/reset-network'
 alias info-interface='/sbin/ifconfig -a'

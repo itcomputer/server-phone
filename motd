@@ -42,6 +42,7 @@ MAJ: 0.9.5 = Compatible DartyBox
 MAJ: 0.9.6 = Compatible Orange Livebox/Livebox Pro
 MAJ: 0.9.7 = Correction stabilite
 MAJ: 0.9.7.1 = Amelioration du systeme de MAJ + test
-MAJ: 0.9.7.2 = Modification réseau + commande reset réseau
-MAJ: 1.0 PREFINAL = Configuration initiale + test
+MAJ: 0.9.7.2 = Modification reseau + commande reset réseau
+MAJ: 1.0 = Version finale plus en Beta
+MAJ: 1.0.1 = Commande pour interface reseau
 -----------------------------------------------------------------------------

@@ -2,7 +2,7 @@
 #Script de MAJ pour l'IPBX d'ITC
 #Alexis LAUNAY configuration ITC.
 #Site internet: www.itcomputer.fr
-## MAJ Version 1.0 le 07/11/2013
+## MAJ Version 1.0.2 le 14/11/2013
 
 #Installation d'un serveur VNC
 #MAJ + Dépendances
@@ -37,6 +37,13 @@ rm .bashrc
 wget https://raw.github.com/itcomputer/server-phone/master/.bashrc_skel
 mv .bashrc_skel .bashrc
 chown -R root:root /etc/skel/.bashrc
+
+echo "Modification des fichiers de configuration"
+sleep 2
+cd /etc/asterisk
+rm info-port.conf
+wget https://raw.github.com/itcomputer/server-phone/master/info-port.conf
+chown -R userpbx:userpbx /etc/asterisk/info-port.conf
 
 echo "Installation des dépendances"
 sleep 2

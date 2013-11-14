@@ -1,7 +1,7 @@
 ========================================================
-=                       Version: 1.0.1                 =
+=                       Version: 1.0.2                 =
 ========================================================
-= MAJ le 11/11/13 de LAUNAY Alexis, SOCIETE ITCOMPUTER =
+= MAJ le 14/11/13 de LAUNAY Alexis, SOCIETE ITCOMPUTER =
 ========================================================
 
 -----------------------------------------------------------------------------
@@ -45,4 +45,5 @@ MAJ: 0.9.7.1 = Amelioration du systeme de MAJ + test
 MAJ: 0.9.7.2 = Modification reseau + commande reset réseau
 MAJ: 1.0     = Version finale plus en Beta
 MAJ: 1.0.1   = Commande pour interface reseau
+MAJ: 1.0.2   = Modification des ports a ouvrir
 -----------------------------------------------------------------------------

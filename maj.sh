@@ -2,7 +2,7 @@
 #Script de MAJ pour l'IPBX d'ITC
 #Alexis LAUNAY configuration ITC.
 #Site internet: www.itcomputer.fr
-## MAJ Version 1.0.2 le 14/11/2013
+## MAJ Version 1.0.3 le 18/11/2013
 
 #Installation d'un serveur VNC
 #MAJ + Dépendances
@@ -37,6 +37,10 @@ rm .bashrc
 wget https://raw.github.com/itcomputer/server-phone/master/.bashrc_skel
 mv .bashrc_skel .bashrc
 chown -R root:root /etc/skel/.bashrc
+cd /etc
+rm reset-network
+wget https://raw.github.com/itcomputer/server-phone/master/reset-network
+chown -R userpbx:userpbx /etc/reset-network
 
 echo "Modification des fichiers de configuration"
 sleep 2

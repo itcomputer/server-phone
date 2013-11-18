@@ -39,7 +39,7 @@ MAJ: 0.9.3   = Compatible FreeBox Revoltion
 MAJ: 0.9.4   = Compatible Bouygues Bbox Sensation
 MAJ: 0.9.5   = Compatible DartyBox
                Commande pour redemarrer les services asterisk
-MAJ: 0.9.6   = Compatible Orange Livebox/Livebox Pro
+MAJ: 0.9.6   = Compatible Orange Livebox/Livebox Pro (V3)
 MAJ: 0.9.7   = Correction stabilite
 MAJ: 0.9.7.1 = Amelioration du systeme de MAJ + test
 MAJ: 0.9.7.2 = Modification reseau + commande reset réseau

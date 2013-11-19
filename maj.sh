@@ -102,7 +102,7 @@ sleep 2
 
 cd /var/www/html
 wget http://www.roks.fr/itcpbx_site.png
-chown -R asterisk:www-data /var/www/html/itcpbx_site.php
+chown -R asterisk:www-data /var/www/html/itcpbx_site.png
 
 #echo "Redémarrage du serveur..."
 #sleep 2

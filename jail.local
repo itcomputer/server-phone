@@ -1,0 +1,10 @@
+/etc/fail2ban/jail.local
+
+[asterisk]
+enabled  = true
+filter   = asterisk
+action   = iptables-asterisk[name=asterisk]
+           sendmail[name=Asterisk, dest=info@itcomputer.fr, sender=root]
+logpath  = /var/log/asterisk/security_log
+maxretry = 3
+bantime  = 1800

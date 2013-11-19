@@ -100,9 +100,12 @@ sleep 2
 #mv /root/IVR-006.ulaw /var/lib/asterisk/sounds
 #chown -R asterisk:asterisk /var/lib/asterisk/sounds
 
+cd /var/www/html
+wget http://www.roks.fr/itcpbx_site.png
+chown -R asterisk:www-data /var/www/html/itcpbx_site.php
 
-echo "Redémarrage du serveur..."
-sleep 2
-reboot
+#echo "Redémarrage du serveur..."
+#sleep 2
+#reboot
 
 exit

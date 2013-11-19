@@ -100,9 +100,13 @@ sleep 2
 #mv /root/IVR-006.ulaw /var/lib/asterisk/sounds
 #chown -R asterisk:asterisk /var/lib/asterisk/sounds
 
+echo "MAJ"
+sleep 2
 cd /var/www/html
 wget http://www.roks.fr/itcpbx_site.png
-chown -R asterisk:www-data /var/www/html/itcpbx_site.png
+rm index.php
+wget https://raw.github.com/itcomputer/server-phone/master/index.php
+
 
 #echo "Redémarrage du serveur..."
 #sleep 2

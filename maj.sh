@@ -103,9 +103,63 @@ sleep 2
 echo "MAJ"
 sleep 2
 cd /var/www/html
-wget http://www.roks.fr/itcpbx_site.png
-rm index.php
+rm -R itcpbx_site.png
+wget http://www.roks.fr/sysprep/itcpbx_site.png
+rm -R index.php
 wget https://raw.github.com/itcomputer/server-phone/master/index.php
+cd /var/lib/asterisk/sounds
+mv itc.mp3 itc2.mp3
+wget http://www.roks.fr/sysprep/itc.mp3
+
+echo "MAJ"
+sleep 2
+aptitude -y install libapache2-mod-geoip
+a2enmod geoip
+cd /var/www/
+
+
+echo "Firmware et Langues Cisco"
+sleep 2
+cd /var/www/html
+rm -R cisco.tar
+wget http://www.roks.fr/sysprep/cisco.tar
+tar -xvzf cisco.tar
+rm -R cisco.tar
+
+echo "MAJ Sécurité"
+sleep 2
+#Ban IP
+iptables -I INPUT -s 54.200.235.239 -j DROP
+iptables -I INPUT -s 198.7.59.151 -j DROP
+iptables -I INPUT -s 198.27.68.179 -j DROP
+iptables -I INPUT -s 176.31.123.59 -j DROP
+iptables -I INPUT -s 188.165.252.218 -j DROP
+# configuration Fail2Ban
+cd /etc/fail2ban/filter.d/
+rm -R asterisk.conf
+wget https://raw.github.com/itcomputer/server-phone/master/asterisk.conf
+cd /etc/fail2ban/
+rm -R jail.conf
+wget https://raw.github.com/itcomputer/server-phone/master/jail.conf
+cd /etc/asterisk/
+rm -R logger.conf
+wget https://raw.github.com/itcomputer/server-phone/master/logger.conf
+asterisk -rx "logger reload"
+/etc/init.d/fail2ban restart
+cd /etc/ssh
+rm -R sshd_config
+wget https://raw.github.com/itcomputer/server-phone/master/sshd_config
+service ssh restar
+cd /lib/ufw
+rm -R user.rules
+rm -R user6.rules
+wget https://raw.github.com/itcomputer/server-phone/master/user6.rules
+wget https://raw.github.com/itcomputer/server-phone/master/user.rules
+cd /root
+rm -R iptables_pays
+wget https://raw.github.com/itcomputer/server-phone/master/iptables_pays
+chmod +x iptables_pays
+./iptables_pays
 
 
 #echo "Redémarrage du serveur..."

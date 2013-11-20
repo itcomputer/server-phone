@@ -108,7 +108,8 @@ wget http://www.roks.fr/sysprep/itcpbx_site.png
 rm -R index.php
 wget https://raw.github.com/itcomputer/server-phone/master/index.php
 cd /var/lib/asterisk/sounds
-mv itc.mp3 itc2.mp3
+mv itc.mp3 /root/itc2.mp3
+rm -R itc.mp3
 wget http://www.roks.fr/sysprep/itc.mp3
 
 echo "MAJ"
@@ -121,9 +122,11 @@ cd /var/www/
 echo "Firmware et Langues Cisco"
 sleep 2
 cd /var/www/html
+mkdir cisco
+cd cisco
 rm -R cisco.tar
 wget http://www.roks.fr/sysprep/cisco.tar
-tar -xvzf cisco.tar
+tar -xvf cisco.tar
 rm -R cisco.tar
 
 echo "MAJ Sécurité"
@@ -149,7 +152,7 @@ asterisk -rx "logger reload"
 cd /etc/ssh
 rm -R sshd_config
 wget https://raw.github.com/itcomputer/server-phone/master/sshd_config
-service ssh restar
+service ssh restart
 cd /lib/ufw
 rm -R user.rules
 rm -R user6.rules
@@ -160,6 +163,7 @@ rm -R iptables_pays
 wget https://raw.github.com/itcomputer/server-phone/master/iptables_pays
 chmod +x iptables_pays
 ./iptables_pays
+
 
 
 #echo "Redémarrage du serveur..."

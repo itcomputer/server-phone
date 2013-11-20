@@ -1,7 +1,7 @@
 ========================================================
-=                       Version: 1.0.3                 =
+=                       Version: 1.0.4                 =
 ========================================================
-= MAJ le 18/11/13 de LAUNAY Alexis, SOCIETE ITCOMPUTER =
+= MAJ le 20/11/13 de LAUNAY Alexis, SOCIETE ITCOMPUTER =
 ========================================================
 
 -----------------------------------------------------------------------------
@@ -47,4 +47,6 @@ MAJ: 1.0     = Version finale plus en Beta
 MAJ: 1.0.1   = Commande pour interface reseau
 MAJ: 1.0.2   = Modification des ports a ouvrir
 MAJ: 1.0.3   = Correction commande reset-network
+MAJ: 1.0.4   = Correction sécurité, musique libre, firmware et langues Cisco
+               page web, module apache2.
 -----------------------------------------------------------------------------

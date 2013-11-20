@@ -13,7 +13,7 @@ HostKey /etc/ssh/ssh_host_dsa_key
 #Privilege Separation is turned on for security
 UsePrivilegeSeparation yes
 
-AllowUsers user gpx regie
+AllowUsers userpbx
 PermitRootLogin no
 PermitEmptyPasswords no
 

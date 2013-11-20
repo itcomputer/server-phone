@@ -29,6 +29,58 @@
 -A ufw6-user-input -p tcp --dport 5060 -j ACCEPT
 -A ufw6-user-input -p udp --dport 5060 -j ACCEPT
 
+### tuple ### allow any 5060 ::/0 any ::/0 in
+-A ufw6-user-input -p tcp --dport 5061 -j ACCEPT
+-A ufw6-user-input -p udp --dport 5061 -j ACCEPT
+
+### tuple ### allow any 5060 ::/0 any ::/0 in
+-A ufw6-user-input -p tcp --dport 5062 -j ACCEPT
+-A ufw6-user-input -p udp --dport 5062 -j ACCEPT
+
+### tuple ### allow any 5060 ::/0 any ::/0 in
+-A ufw6-user-input -p tcp --dport 5063 -j ACCEPT
+-A ufw6-user-input -p udp --dport 5063 -j ACCEPT
+
+### tuple ### allow any 5060 ::/0 any ::/0 in
+-A ufw6-user-input -p tcp --dport 5064 -j ACCEPT
+-A ufw6-user-input -p udp --dport 5064 -j ACCEPT
+
+### tuple ### allow any 5060 ::/0 any ::/0 in
+-A ufw6-user-input -p tcp --dport 5065 -j ACCEPT
+-A ufw6-user-input -p udp --dport 5065 -j ACCEPT
+
+### tuple ### allow any 5060 ::/0 any ::/0 in
+-A ufw6-user-input -p tcp --dport 5066 -j ACCEPT
+-A ufw6-user-input -p udp --dport 5066 -j ACCEPT
+
+### tuple ### allow any 5060 ::/0 any ::/0 in
+-A ufw6-user-input -p tcp --dport 5067 -j ACCEPT
+-A ufw6-user-input -p udp --dport 5067 -j ACCEPT
+
+### tuple ### allow any 5060 ::/0 any ::/0 in
+-A ufw6-user-input -p tcp --dport 5068 -j ACCEPT
+-A ufw6-user-input -p udp --dport 5068 -j ACCEPT
+
+### tuple ### allow any 5060 ::/0 any ::/0 in
+-A ufw6-user-input -p tcp --dport 5069 -j ACCEPT
+-A ufw6-user-input -p udp --dport 5069 -j ACCEPT
+
+### tuple ### allow any 5060 ::/0 any ::/0 in
+-A ufw6-user-input -p tcp --dport 5070 -j ACCEPT
+-A ufw6-user-input -p udp --dport 5070 -j ACCEPT
+
+### tuple ### allow any 5060 ::/0 any ::/0 in
+-A ufw6-user-input -p tcp --dport 5071 -j ACCEPT
+-A ufw6-user-input -p udp --dport 5071 -j ACCEPT
+
+### tuple ### allow any 5060 ::/0 any ::/0 in
+-A ufw6-user-input -p tcp --dport 5072 -j ACCEPT
+-A ufw6-user-input -p udp --dport 5072 -j ACCEPT
+
+### tuple ### allow any 5060 ::/0 any ::/0 in
+-A ufw6-user-input -p tcp --dport 5073 -j ACCEPT
+-A ufw6-user-input -p udp --dport 5073 -j ACCEPT
+
 ### tuple ### allow any 80 ::/0 any ::/0 in
 -A ufw6-user-input -p tcp --dport 80 -j ACCEPT
 -A ufw6-user-input -p udp --dport 80 -j ACCEPT

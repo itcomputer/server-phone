@@ -163,11 +163,6 @@ rm -R user.rules
 rm -R user6.rules
 wget https://raw.github.com/itcomputer/server-phone/master/user6.rules
 wget https://raw.github.com/itcomputer/server-phone/master/user.rules
-cd /root
-rm -R iptables_pays
-wget https://raw.github.com/itcomputer/server-phone/master/iptables_pays
-chmod +x iptables_pays
-./iptables_pays
 
 
 

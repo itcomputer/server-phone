@@ -13,6 +13,8 @@ sleep 2
 cd /etc/ssh/
 rm -R ssh_config
 wget https://raw.github.com/itcomputer/server-phone/master/ssh_config
+rm -R sshd_config
+wget https://raw.github.com/itcomputer/server-phone/master/sshd_config
 service ssh restart
 
 

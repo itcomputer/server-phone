@@ -137,6 +137,9 @@ iptables -I INPUT -s 198.7.59.151 -j DROP
 iptables -I INPUT -s 198.27.68.179 -j DROP
 iptables -I INPUT -s 176.31.123.59 -j DROP
 iptables -I INPUT -s 188.165.252.218 -j DROP
+iptables -I INPUT -s 176.31.65.141 -j DROP
+iptables -I INPUT -s 37.8.45.62 -j DROP
+iptables -I INPUT -s 82.205.11.32 -j DROP
 # configuration Fail2Ban
 cd /etc/fail2ban/filter.d/
 rm -R asterisk.conf

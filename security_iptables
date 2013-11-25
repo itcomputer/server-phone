@@ -102,6 +102,11 @@ iptables -t filter -A OUTPUT -p udp --dport 5061 -j ACCEPT
 iptables -t filter -A INPUT -p tcp --dport 5061 -j ACCEPT
 iptables -t filter -A INPUT -p udp --dport 5061 -j ACCEPT
 
+iptables -t filter -A OUTPUT -p tcp --dport 10000:20000 -j ACCEPT
+iptables -t filter -A OUTPUT -p udp --dport 10000:20000 -j ACCEPT
+iptables -t filter -A INPUT -p tcp --dport 10000:20000 -j ACCEPT
+iptables -t filter -A INPUT -p udp --dport 10000:20000 -j ACCEPT
+
 # Ban liste IP
 
 iptables -I INPUT -s 54.200.235.239 -j DROP

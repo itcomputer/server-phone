@@ -2,7 +2,7 @@
 #Script de MAJ pour l'IPBX d'ITC
 #Alexis LAUNAY configuration ITC.
 #Site internet: www.itcomputer.fr
-## MAJ Version 1.0.5 le 24/11/2013
+## MAJ Version 1.0.6 le 26/11/2013
 
 #Installation d'un serveur VNC
 #MAJ + Dépendances
@@ -51,6 +51,8 @@ chown -R userpbx:userpbx /etc/asterisk/info-port.conf
 
 echo "Installation des dépendances"
 sleep 2
+apt-get -y install ntpdate
+ntpdate pool.ntp.org
 #apt-get -y install build-essential
 #apt-get -y install libxml2-dev
 #apt-get -y install libncurses5-dev

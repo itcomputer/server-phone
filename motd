@@ -53,5 +53,6 @@ MAJ: 1.0.4   = musique libre, firmware et langues Cisco
                page web, module apache2.
 MAJ: 1.0.5   = Correction securite, correction stabilite,
                commande info-itcpbx et info-parefeu
-MAJ: 1.0.5a   = Correction commande config-voicemail et correction date et heure
+MAJ: 1.0.5a  = Correction commande config-voicemail et correction date et heure
+               Info IP au chargement, frequence CPU a 944MHz
 -----------------------------------------------------------------------------

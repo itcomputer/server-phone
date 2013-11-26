@@ -29,6 +29,7 @@ config-music            #       Editer le fichier musiconhold.
 restart-asterisk        #       Redemarrer les services Asterisk.
 parefeu-on              #       Activer le Pare-feu.
 parefeu-off             #       Desctiver le Pare-feu.
+info-parefeu            #       Information sur les regles du Pare-feu.
 info-temp                       Temperature du CPU.
 reboot-itcpbx                   Redemarrage du serveur ITCPBX.
 stop-itcpbx                     Arret du serveur ITCPBX.
@@ -50,5 +51,6 @@ MAJ: 1.0.2   = Modification des ports a ouvrir
 MAJ: 1.0.3   = Correction commande reset-network
 MAJ: 1.0.4   = musique libre, firmware et langues Cisco
                page web, module apache2.
-MAJ: 1.0.5   = Correction securite, correction stabilite, commande info-itcpbx.
+MAJ: 1.0.5   = Correction securite, correction stabilite,
+               commande info-itcpbx et info-parefeu
 -----------------------------------------------------------------------------

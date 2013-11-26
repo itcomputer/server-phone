@@ -1,0 +1,12 @@
+#!/bin/sh
+echo "\033[1mIP de la machine :\033[0m"
+ifconfig eth0 | grep inet | awk '{print $2}' | sed -e s/.*://
+ifconfig eth1 | grep inet | awk '{print $2}' | sed -e s/.*://
+ifconfig eth2 | grep inet | awk '{print $2}' | sed -e s/.*://
+ifconfig eth3 | grep inet | awk '{print $2}' | sed -e s/.*://
+ifconfig eth4 | grep inet | awk '{print $2}' | sed -e s/.*://
+ifconfig eth5 | grep inet | awk '{print $2}' | sed -e s/.*://
+ifconfig eth6 | grep inet | awk '{print $2}' | sed -e s/.*://
+ifconfig eth7 | grep inet | awk '{print $2}' | sed -e s/.*://
+ifconfig eth8 | grep inet | awk '{print $2}' | sed -e s/.*://
+ifconfig eth9 | grep inet | awk '{print $2}' | sed -e s/.*://

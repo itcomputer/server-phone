@@ -23,31 +23,36 @@ chown -R root:root /etc/motd
 echo "Modification des commandes"
 sleep 2
 cd /home/userpbx
-rm .bashrc
+rm -R .bashrc
 wget https://raw.github.com/itcomputer/server-phone/master/.bashrc_userpbx
 mv .bashrc_userpbx .bashrc
 chown -R userpbx:userpbx /home/userpbx/.bashrc
 cd /root
-rm .bashrc
+rm -R .bashrc
 wget https://raw.github.com/itcomputer/server-phone/master/.bashrc_root
 mv .bashrc_root .bashrc
 chown -R root:root /root/.bashrc
 cd /etc/skel
-rm .bashrc
+rm -R .bashrc
 wget https://raw.github.com/itcomputer/server-phone/master/.bashrc_skel
 mv .bashrc_skel .bashrc
 chown -R root:root /etc/skel/.bashrc
 cd /etc
-rm reset-network
+rm -R reset-network
 wget https://raw.github.com/itcomputer/server-phone/master/reset-network
 chown -R userpbx:userpbx /etc/reset-network
 
 echo "Modification des fichiers de configuration"
 sleep 2
 cd /etc/asterisk
-rm info-port.conf
+rm -R info-port.conf
 wget https://raw.github.com/itcomputer/server-phone/master/info-port.conf
 chown -R userpbx:userpbx /etc/asterisk/info-port.conf
+cd /usr/local/bin
+rm -R afficher-ip
+wget https://raw.github.com/itcomputer/server-phone/master/afficher-ip
+chown -R root:root /usr/local/bin/afficher-ip
+chmod +x /usr/local/bin/afficher-ip
 
 echo "Installation des dépendances"
 sleep 2

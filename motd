@@ -1,7 +1,7 @@
 ========================================================
-=                       Version: 1.0.5                 =
+=                       Version: 1.0.6                 =
 ========================================================
-= MAJ le 25/11/13 de LAUNAY Alexis, SOCIETE ITCOMPUTER =
+= MAJ le 26/11/13 de LAUNAY Alexis, SOCIETE ITCOMPUTER =
 ========================================================
 
 -----------------------------------------------------------------------------
@@ -53,4 +53,5 @@ MAJ: 1.0.4   = musique libre, firmware et langues Cisco
                page web, module apache2.
 MAJ: 1.0.5   = Correction securite, correction stabilite,
                commande info-itcpbx et info-parefeu
+MAJ: 1.0.6   = Correction commande config-voicemail et correction date et heure
 -----------------------------------------------------------------------------

@@ -1,12 +1,13 @@
 ========================================================
 =                       Version: 1.0.5                 =
 ========================================================
-= MAJ le 24/11/13 de LAUNAY Alexis, SOCIETE ITCOMPUTER =
+= MAJ le 25/11/13 de LAUNAY Alexis, SOCIETE ITCOMPUTER =
 ========================================================
 
 -----------------------------------------------------------------------------
 Commandes       Autorisations   Descriptions
 -----------------------------------------------------------------------------
+info-itcpbx                     Information serial number.
 maj-pbxitc              #       Mettre a jours le serveur ITCPBX.
 change-pass                     Changer le mot de passe 'userpbx'.
 configure-timezone              Modification du timezone.
@@ -47,6 +48,7 @@ MAJ: 1.0     = Version finale plus en Beta
 MAJ: 1.0.1   = Commande pour interface reseau
 MAJ: 1.0.2   = Modification des ports a ouvrir
 MAJ: 1.0.3   = Correction commande reset-network
-MAJ: 1.0.4   = Correction sécurité, musique libre, firmware et langues Cisco
+MAJ: 1.0.4   = musique libre, firmware et langues Cisco
                page web, module apache2.
+MAJ: 1.0.5   = Correction securite, correction stabilite, commande info-itcpbx.
 -----------------------------------------------------------------------------

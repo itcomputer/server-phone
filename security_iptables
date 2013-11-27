@@ -189,4 +189,3 @@ $IPT -I FORWARD -j $SPAMLIST
 #iptables -P INPUT DROP
 #iptables -P OUTPUT ACCEPT
 iptables-save > /etc/iptables.up.rules
-reboot

@@ -4,8 +4,9 @@ server-phone
 Serveur téléphonique
 
 
-Correctif MAJ 1.0.4:
+Correctif MAJ 1.0.6:
 
 Ouverture des ports 5060 à 5080
 modification mot de passe root
-Ajouter une page d'accueil html "Félicitation votre ITCPBX est fonctionnel sur votre réseau" + numéro ITC.
+ajouter un système de maj pour seulement la sécurité
+ajouter commande Asterisk

@@ -18,6 +18,7 @@
 # alias mv='mv -i'
 
 alias maj-pbxitc='/etc/init.d/majauto.sh'
+alias maj-securite='/root//security_iptables'
 alias ip-network='nano /etc/network/interfaces'
 alias config-vpn='nano /etc/pptpd.conf'
 alias config-client-vpn='nano /etc/ppp/chap-secrets'

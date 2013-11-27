@@ -9,6 +9,7 @@ Commandes       Autorisations   Descriptions
 -----------------------------------------------------------------------------
 info-itcpbx                     Information serial number.
 maj-pbxitc              #       Mettre a jours le serveur ITCPBX.
+maj-securite            #       Mettre a jours la securite du serveur ITCPBX.
 change-pass                     Changer le mot de passe 'userpbx'.
 configure-timezone              Modification du timezone.
 info-interface                  Information interface reseau.
@@ -30,6 +31,7 @@ restart-asterisk        #       Redemarrer les services Asterisk.
 parefeu-on              #       Activer le Pare-feu.
 parefeu-off             #       Desctiver le Pare-feu.
 info-parefeu            #       Information sur les regles du Pare-feu.
+terminal                #       Terminal Asterisk.
 info-temp                       Temperature du CPU.
 reboot-itcpbx                   Redemarrage du serveur ITCPBX.
 stop-itcpbx                     Arret du serveur ITCPBX.
@@ -55,4 +57,5 @@ MAJ: 1.0.5   = Correction securite, correction stabilite,
                commande info-itcpbx et info-parefeu
 MAJ: 1.0.5a  = Correction commande config-voicemail et correction date et heure
                Info IP au chargement, frequence CPU a 944MHz
+               commande terminal et maj-securite.
 -----------------------------------------------------------------------------

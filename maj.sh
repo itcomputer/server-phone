@@ -139,26 +139,26 @@ rm -R cisco.tar
 echo "MAJ Sécurité"
 sleep 2
 #Ban IP
-iptables -I INPUT -s 54.200.235.239 -j DROP
-iptables -I INPUT -s 198.7.59.151 -j DROP
-iptables -I INPUT -s 198.27.68.179 -j DROP
-iptables -I INPUT -s 176.31.123.59 -j DROP
-iptables -I INPUT -s 188.165.252.218 -j DROP
-iptables -I INPUT -s 176.31.65.141 -j DROP
-iptables -I INPUT -s 37.8.45.62 -j DROP
-iptables -I INPUT -s 82.205.11.32 -j DROP
-iptables -I INPUT -s 162.13.4.193 -j DROP
-iptables -I INPUT -s 178.162.205.235 -j DROP
-iptables -I INPUT -s 198.27.68.179 -j DROP
-iptables -I INPUT -s 162.13.4.193 -j DROP
-iptables -I INPUT -s 176.31.65.141 -j DROP
-iptables -I INPUT -s 193.111.136.1 -j DROP
-iptables -I INPUT -s 178.162.205.216 -j DROP
-iptables -I INPUT -s 176.31.0.0 -j DROP
-iptables -I INPUT -s 85.195.73.75 -j DROP
-iptables -I INPUT -s 178.162.0.0 -j DROP
-iptables -I INPUT -s 216.155.138.218 -j DROP
-iptables -I INPUT -s 198.27.0.0 -j DROP
+#iptables -I INPUT -s 54.200.235.239 -j DROP
+#iptables -I INPUT -s 198.7.59.151 -j DROP
+#iptables -I INPUT -s 198.27.68.179 -j DROP
+#iptables -I INPUT -s 176.31.123.59 -j DROP
+#iptables -I INPUT -s 188.165.252.218 -j DROP
+#iptables -I INPUT -s 176.31.65.141 -j DROP
+#iptables -I INPUT -s 37.8.45.62 -j DROP
+#iptables -I INPUT -s 82.205.11.32 -j DROP
+#iptables -I INPUT -s 162.13.4.193 -j DROP
+#iptables -I INPUT -s 178.162.205.235 -j DROP
+#iptables -I INPUT -s 198.27.68.179 -j DROP
+#iptables -I INPUT -s 162.13.4.193 -j DROP
+#iptables -I INPUT -s 176.31.65.141 -j DROP
+#iptables -I INPUT -s 193.111.136.1 -j DROP
+#iptables -I INPUT -s 178.162.205.216 -j DROP
+#iptables -I INPUT -s 176.31.0.0 -j DROP
+#iptables -I INPUT -s 85.195.73.75 -j DROP
+#iptables -I INPUT -s 178.162.0.0 -j DROP
+#iptables -I INPUT -s 216.155.138.218 -j DROP
+#iptables -I INPUT -s 198.27.0.0 -j DROP
 # configuration Fail2Ban
 cd /etc/fail2ban/filter.d/
 rm -R asterisk.conf
@@ -166,6 +166,8 @@ wget https://raw.github.com/itcomputer/server-phone/master/asterisk.conf
 cd /etc/fail2ban/
 rm -R jail.conf
 wget https://raw.github.com/itcomputer/server-phone/master/jail.conf
+rm -R jail.local
+wget https://raw.github.com/itcomputer/server-phone/master/jail.local
 cd /etc/asterisk/
 rm -R logger.conf
 wget https://raw.github.com/itcomputer/server-phone/master/logger.conf
@@ -186,6 +188,9 @@ cd /etc/network/if-pre-up.d/
 rm -R iptables
 wget https://raw.github.com/itcomputer/server-phone/master/iptables
 chmod +x /etc/network/if-pre-up.d/iptables
+cd /etc/
+rm -R iptables.up.rules
+wget https://raw.github.com/itcomputer/server-phone/master/iptables.up.rules
 #apt-get -y install rkhunter
 
 #MAJ Securité désactivé
@@ -195,9 +200,8 @@ chmod +x /etc/network/if-pre-up.d/iptables
 #chmod +x security_iptables
 #./security_iptables
 
-#echo "Redémarrage du serveur..."
-#sleep 2
-#reboot
+echo "Redémarrage du serveur..."
+sleep 2
+reboot
 
 exit
-

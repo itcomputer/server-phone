@@ -1,7 +1,7 @@
 ========================================================
-=                       Version: 1.0.5a                 =
+=                       Version: 1.0.5b                =
 ========================================================
-= MAJ le 26/11/13 de LAUNAY Alexis, SOCIETE ITCOMPUTER =
+= MAJ le 29/11/13 de LAUNAY Alexis, SOCIETE ITCOMPUTER =
 ========================================================
 
 -----------------------------------------------------------------------------
@@ -31,7 +31,10 @@ restart-asterisk        #       Redemarrer les services Asterisk.
 parefeu-on              #       Activer le Pare-feu.
 parefeu-off             #       Desctiver le Pare-feu.
 info-parefeu            #       Information sur les regles du Pare-feu.
+save-parefeu            #       Sauvegarde des regles du Pare-feu.
+recovery-parefeu        #       Restauration des regles du Pare-feu.
 terminal                #       Terminal Asterisk.
+log-itcpbx              #       Consulter les logs de l'ITCPBX.
 info-temp                       Temperature du CPU.
 reboot-itcpbx                   Redemarrage du serveur ITCPBX.
 stop-itcpbx                     Arret du serveur ITCPBX.
@@ -58,4 +61,6 @@ MAJ: 1.0.5   = Correction securite, correction stabilite,
 MAJ: 1.0.5a  = Correction commande config-voicemail et correction date et heure
                Info IP au chargement, frequence CPU a 944MHz
                commande terminal et maj-securite.
+MAJ: 1.0.5b  = Correction des regles de securite.
+               Commandes recovery-parefeu, save-parefeu et log-itcpbx.
 -----------------------------------------------------------------------------

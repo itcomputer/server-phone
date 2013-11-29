@@ -2,7 +2,7 @@
 #Script de MAJ pour l'IPBX d'ITC
 #Alexis LAUNAY configuration ITC.
 #Site internet: www.itcomputer.fr
-## MAJ Version 1.0.5a le 26/11/2013
+## MAJ Version 1.0.5b le 29/11/2013
 
 #Installation d'un serveur VNC
 #MAJ + Dépendances

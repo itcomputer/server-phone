@@ -63,4 +63,5 @@ MAJ: 1.0.5a  = Correction commande config-voicemail et correction date et heure
                commande terminal et maj-securite.
 MAJ: 1.0.5b  = Correction des regles de securite.
                Commandes recovery-parefeu, save-parefeu et log-itcpbx.
+               FreePBX: Username ITCPBX Password itcpassword.
 -----------------------------------------------------------------------------

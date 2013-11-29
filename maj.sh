@@ -187,11 +187,13 @@ rm -R iptables
 wget https://raw.github.com/itcomputer/server-phone/master/iptables
 chmod +x /etc/network/if-pre-up.d/iptables
 #apt-get -y install rkhunter
-cd /root
-rm -R security_iptables
-wget https://raw.github.com/itcomputer/server-phone/master/security_iptables
-chmod +x security_iptables
-./security_iptables
+
+#MAJ Securité désactivé
+#cd /root
+#rm -R security_iptables
+#wget https://raw.github.com/itcomputer/server-phone/master/security_iptables
+#chmod +x security_iptables
+#./security_iptables
 
 #echo "Redémarrage du serveur..."
 #sleep 2

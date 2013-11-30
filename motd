@@ -10,6 +10,7 @@ Commandes       Autorisations   Descriptions
 info-itcpbx                     Information serial number.
 maj-pbxitc              #       Mettre a jours le serveur ITCPBX.
 maj-securite            #       Mettre a jours la securite du serveur ITCPBX.
+config-maj              #       Configuration des horaires de MAJ.
 change-pass                     Changer le mot de passe 'userpbx'.
 configure-timezone              Modification du timezone.
 info-interface                  Information interface reseau.

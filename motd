@@ -1,7 +1,7 @@
 ========================================================
-=                       Version: 1.0.5b                =
+=                       Version: 1.0.5c                =
 ========================================================
-= MAJ le 29/11/13 de LAUNAY Alexis, SOCIETE ITCOMPUTER =
+= MAJ le 30/11/13 de LAUNAY Alexis, SOCIETE ITCOMPUTER =
 ========================================================
 
 -----------------------------------------------------------------------------
@@ -64,4 +64,5 @@ MAJ: 1.0.5a  = Correction commande config-voicemail et correction date et heure
 MAJ: 1.0.5b  = Correction des regles de securite.
                Commandes recovery-parefeu, save-parefeu et log-itcpbx.
                FreePBX: Username ITCPBX Password itcpassword.
+MAJ: 1.0.5c  = Commande config-maj et MAJ auto chaque dimanche a minuit.
 -----------------------------------------------------------------------------

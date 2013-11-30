@@ -3,10 +3,7 @@ server-phone
 
 Serveur téléphonique
 
+MAJ version 1.0.5c
 
-Correctif MAJ 1.0.6:
-
+Configuration crontab + commande pour configurer la mise à jour
 Ouverture des ports 5060 à 5080
-modification mot de passe root
-ajouter un système de maj pour seulement la sécurité
-ajouter commande Asterisk

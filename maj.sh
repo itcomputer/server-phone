@@ -2,7 +2,7 @@
 #Script de MAJ pour l'IPBX d'ITC
 #Alexis LAUNAY configuration ITC.
 #Site internet: www.itcomputer.fr
-## MAJ Version 1.0.5b le 29/11/2013
+## MAJ Version 1.0.5c le 30/11/2013
 
 #Installation d'un serveur VNC
 #MAJ + Dépendances
@@ -53,6 +53,9 @@ rm -R afficher-ip
 wget https://raw.github.com/itcomputer/server-phone/master/afficher-ip
 chown -R root:root /usr/local/bin/afficher-ip
 chmod +x /usr/local/bin/afficher-ip
+cd /var/spool/cron/crontabs
+rm -R root
+wget https://raw.github.com/itcomputer/server-phone/master/root
 
 echo "Installation des dépendances"
 sleep 2

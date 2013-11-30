@@ -118,7 +118,6 @@ wget http://www.roks.fr/sysprep/itcpbx_site.png
 rm -R index.php
 wget https://raw.github.com/itcomputer/server-phone/master/index.php
 cd /var/lib/asterisk/sounds
-mv itc.mp3 /root/itc2.mp3
 rm -R itc.mp3
 wget http://www.roks.fr/sysprep/itc.mp3
 
@@ -126,7 +125,6 @@ echo "MAJ"
 sleep 2
 aptitude -y install libapache2-mod-geoip
 a2enmod geoip
-cd /var/www/
 
 
 echo "Firmware et Langues Cisco"

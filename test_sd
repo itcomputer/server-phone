@@ -1,0 +1,32 @@
+#!/bin/bash
+#Script test carte SD de l'IPBX d'ITC
+#Alexis LAUNAY configuration ITC.
+## MAJ Version 1.0.6 le 04/12/2013
+
+echo "Lancement du test de lecture N°1"
+sleep 2
+sudo hdparm -tT /dev/mmcblk0
+
+echo "Lancement du test de lecture N°2"
+sleep 2
+sudo hdparm -tT --direct /dev/mmcblk0
+
+echo "Lancement du test de lecture N°3"
+echo "Ctrl C pour quiter"
+sleep 2
+sudo cat /dev/mmcblk0 | pv -r > /dev/null
+
+echo "Lancement du test d'écriture N°1"
+sleep 2
+dd if=/dev/zero of=/tmp/test.data bs=1M count=256 conv=fdatasync
+rm -f /tmp/test.data
+
+echo "Lancement du test d'écriture N°2"
+sleep 2
+dd if=/dev/zero of=/tmp/test.data bs=1M count=512 conv=fdatasync
+rm -f /tmp/test.data
+
+echo "Lancement du test d'écriture N°3"
+sleep 2
+dd if=/dev/zero of=/tmp/test.data bs=1M count=1024 conv=fdatasync
+rm -f /tmp/test.data

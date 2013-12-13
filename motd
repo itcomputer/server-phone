@@ -1,7 +1,7 @@
 ========================================================
-=                       Version: 1.0.5c                =
+=                       Version: 1.0.6                =
 ========================================================
-= MAJ le 30/11/13 de LAUNAY Alexis, SOCIETE ITCOMPUTER =
+= MAJ le 30/12/13 de LAUNAY Alexis, SOCIETE ITCOMPUTER =
 ========================================================
 
 -----------------------------------------------------------------------------
@@ -23,6 +23,9 @@ config-vpn              #       Configuration du vpn, adresse ip et plage.
 config-client-vpn       #       Configuration des clients pour le VPN.
 start-vpn                       Demarrage du service VPN.
 stop-vpn                        Arret du service VPN.
+test-sd                 #       Tester la carte SD.
+edit-md5                #       Editer le cryptage md5 du mot de passe.
+password-md5            #       Genrateur de mot de passe en md5.
 config-extensions       #       Editer le fichier extensions.
 config-users            #       Editer le fichier users.
 config-sip              #       Editer le fichier sip.
@@ -34,6 +37,8 @@ parefeu-off             #       Desctiver le Pare-feu.
 info-parefeu            #       Information sur les regles du Pare-feu.
 save-parefeu            #       Sauvegarde des regles du Pare-feu.
 recovery-parefeu        #       Restauration des regles du Pare-feu.
+save_conf               #       Sauvegarde de la configuration.
+recovery-conf           #       Restauration de la configuration.
 terminal                #       Terminal Asterisk.
 log-itcpbx              #       Consulter les logs de l'ITCPBX.
 info-temp                       Temperature du CPU.
@@ -66,4 +71,9 @@ MAJ: 1.0.5b  = Correction des regles de securite.
                Commandes recovery-parefeu, save-parefeu et log-itcpbx.
                FreePBX: Username ITCPBX Password itcpassword.
 MAJ: 1.0.5c  = Commande config-maj et MAJ auto chaque dimanche a minuit.
+MAJ: 1.0.6   = Version commerciale de l'ITCPBX
+               Commandes cryptages, test_sd
+               Amelioration du pare-feu
+               Musique libre de droit
+               Sauvegarde et restauration des conf
 -----------------------------------------------------------------------------

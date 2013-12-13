@@ -1,0 +1,21 @@
+# Script de sauvegarde de la configuration ITCPBX - By LAUNAY Alexis
+# MAJ: 13/12/2013
+
+# ALLER DANS LE REPERTOIRE /home/user pour ne pas saturer la partition systeme.
+cd /home/userpbx/
+# SUPPRESSION DES FICHIERS DANS LA CORBEILLE /home/ et l'utilisateur qui execute la commande.
+sudo rm /home/.Trash-0/files/*
+sudo rm -R /home/.Trash-0/files/*
+sudo rm ~/.local/share/Trash/files/*
+sudo rm -R ~/.local/share/Trash/files/*
+# COPIE ET COMPRESSION EN TAR.GZ pour garder les bonne permissions et exclure de la copie des fichiers et repertoires.
+# save_config
+tar -cvzf save_config.tar.gz /etc/ppp/chap-secrets /etc/pptpd.conf /etc/fail2ban/filtrer.d/ /etc/fail2ban/jail.conf /etc/init.d/firewall /var/www/html/admin/modules/core/etc/ /etc/asterisk/users.conf /etc/asterisk/voicemail.conf /var/lib/asterisk/sounds/ --exclude=/var/lib/asterisk/sounds/custom --exclude=/var/lib/asterisk/sounds/en --exclude=/var/lib/asterisk/sounds/fr /etc/iptables.up.rules /var/spool/cron/crontabs/root
+
+# DEPLACEMENT DU FICHIER VERS LE DOCUMENT DE SAUVEGARDE.
+mkdir /var/www/html/sauvegarde
+rm -R /var/www/html/sauvegarde/save_config.tar.gz
+mv /home/userpbx/save_config.tar.gz /var/www/html/sauvegarde/
+
+# SUPPRESSION DE LA COPIE TAR.GZ DANS LE REPERTOIRE RACINE.
+rm -R /home/userpbx/save_config.tar.gz

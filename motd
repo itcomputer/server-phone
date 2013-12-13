@@ -72,8 +72,11 @@ MAJ: 1.0.5b  = Correction des regles de securite.
                FreePBX: Username ITCPBX Password itcpassword.
 MAJ: 1.0.5c  = Commande config-maj et MAJ auto chaque dimanche a minuit.
 MAJ: 1.0.6   = Version commerciale de l'ITCPBX
-               Commandes cryptages, test_sd
+               Commandes cryptages et commande test_sd
                Amelioration du pare-feu
-               Musique libre de droit
-               Sauvegarde et restauration des conf
+               Musiques d'attentes libre de droit sous licences CC
+                              1) Nicolas Falcon - What I Know About You
+                              2) Josh Woodward - Stars Collide
+                              3) Musetta - Ophelias Song
+               Sauvegarde et restauration de la configuration
 -----------------------------------------------------------------------------

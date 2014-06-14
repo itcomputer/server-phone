@@ -1,19 +1,28 @@
-#!/bin/bash
-### Script by Alexis LAUNAY
-### MAJ: 19/11/2013
-### Blocage des pays ###
-ISO="af za al ao ai ag an sa ar am aw au az bs bh bd pw bz bj bm bt by mm bo ba bw br bn bg bf bi kh cm cv cl cn cy co km cg cd kp kr cr ci hr cu dj dm eg ae ec er ee et fj ga gm ge gh gi gr gd gl gp gu gt gn gq gw gy ht hn hk hu cx nf ky ck cc fk fo mh pn sb sj tc vi vg in id ir iq is il jm jp jo kz ke kg ki kw la ls lv lb lr ly li lt mo mk mg my mw mv ml mt mp mu mr mx fm md mn ms mz na nr np ni ne ng nu no nz om ug uz ok pa py nl pe ph pl pr pt qa cf do cz ro ru rw eh kn sh lc sm pm va vc sv ws as st sn yu sc sl sg sk si so sd lk se ch sr sz sy tj tw tz td th tl tg tk to tt tm tv ua uy vu ve vn wf ye zm"
- 
+#! /bin/sh
+### BEGIN INIT INFO
+# Provides: iptab
+# Required-Start: dbus mountall
+# Required-Stop:
+# Should-Start:
+# Should-Stop:
+# Default-Start: started dbus and started mountall
+# Default-Stop: 2 3 4 5
+# Short-Description: Start and stop iptab
+# Description: iptab
+### END INIT INFO
+
+ISO="sg sk si so sd lk se ch sr sz sy tj tw tz td th tl tg tk to tt tm tv ua uy vu ve vn wf ye zm"
+
 ### Set PATH ###
 IPT=/sbin/iptables
 WGET=/usr/bin/wget
 EGREP=/bin/egrep
- 
+
 ### No editing below ###
 SPAMLIST="countrydrop"
 ZONEROOT="/root/iptables"
-DLROOT="http://www.roks.fr/sysprep/iptables"
- 
+DLROOT="http://www.itc-informatique.fr/ITCPBX/iptables"
+
 cleanOldRules(){
 $IPT -F
 $IPT -X

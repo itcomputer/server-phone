@@ -10,7 +10,7 @@ sudo rm ~/.local/share/Trash/files/*
 sudo rm -R ~/.local/share/Trash/files/*
 # COPIE ET COMPRESSION EN TAR.GZ pour garder les bonne permissions et exclure de la copie des fichiers et repertoires.
 # save_config
-tar -cvzf save_config.tar.gz /etc/ppp/chap-secrets /etc/pptpd.conf /etc/fail2ban/filtrer.d/ /etc/fail2ban/jail.conf /etc/init.d/firewall /var/www/html/admin/modules/core/etc/ /etc/asterisk/users.conf /etc/asterisk/voicemail.conf /var/lib/asterisk/sounds/ --exclude=/var/lib/asterisk/sounds/custom --exclude=/var/lib/asterisk/sounds/en --exclude=/var/lib/asterisk/sounds/fr /etc/iptables.up.rules /var/spool/cron/crontabs/root
+tar -cvzf save_config.tar.gz /etc/network/interfaces /etc/ppp/chap-secrets /etc/pptpd.conf /etc/fail2ban/filtrer.d/ /etc/fail2ban/jail.conf /etc/init.d/firewall /var/www/html/admin/modules/core/etc/ /etc/asterisk/users.conf /etc/asterisk/voicemail.conf /var/lib/asterisk/sounds/ --exclude=/var/lib/asterisk/sounds/custom --exclude=/var/lib/asterisk/sounds/en --exclude=/var/lib/asterisk/sounds/fr /etc/iptables.up.rules /var/spool/cron/crontabs/root
 
 # DEPLACEMENT DU FICHIER VERS LE DOCUMENT DE SAUVEGARDE.
 mkdir /var/www/html/sauvegarde

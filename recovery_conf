@@ -1,9 +1,10 @@
 # Script de restauration de la configuration ITCPBX - By LAUNAY Alexis
-# MAJ: 13/12/2013
+# MAJ: 15/06/2014
 
 echo "Restauration de la configuration ITCPBX"
 sleep 2
 cd /
-wget http://www.itcomputer.fr/itcpbx/restauration/save_config.tar.gz
+wget http://www.itc-informatique.fr/ITCPBX/restauration/save_config.tar.gz
 tar zxvf save_config.tar.gz
 rm -R save_config.tar.gz
+

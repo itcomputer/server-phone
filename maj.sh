@@ -18,7 +18,7 @@ sudo rm /home/.Trash-0/files/*
 sudo rm -R /home/.Trash-0/files/*
 sudo rm ~/.local/share/Trash/files/*
 sudo rm -R ~/.local/share/Trash/files/*
-tar -cvzf save_config.tar.gz /etc/ppp/chap-secrets /etc/pptpd.conf /etc/fail2ban/filtrer.d/ /et$
+tar -cvzf save_config.tar.gz /etc/ppp/chap-secrets /etc/pptpd.conf /etc/fail2ban/filtrer.d/ /etc/fail2ban/jail.conf /etc/init.d/firewall /var/www/html/admin/modules/core/etc/ /etc/asterisk/users.conf /etc/asterisk/voicemail.conf /var/lib/asterisk/sounds/ --exclude=/var/lib/asterisk/sounds/custom --exclude=/var/lib/asterisk/sounds/en --exclude=/var/lib/asterisk/sounds/fr /etc/iptables.up.rules /var/spool/cron/crontabs/root
 mkdir /var/www/html/sauvegarde
 rm -R /var/www/html/sauvegarde/save_config.tar.gz
 mv /home/userpbx/save_config.tar.gz /var/www/html/sauvegarde/
@@ -34,45 +34,45 @@ echo "Modification version et message d'accueil SSH"
 sleep 2
 cd /etc
 rm motd
-wget https://raw.github.com/itcomputer/server-phone/master/motd
+wget http://www.itc-informatique.fr/ITCPBX/motd
 chown -R root:root /etc/motd
 
 echo "Modification des commandes"
 sleep 2
 cd /home/userpbx
 rm -R .bashrc
-wget https://raw.github.com/itcomputer/server-phone/master/.bashrc_userpbx
+wget http://www.itc-informatique.fr/ITCPBX/.bashrc_userpbx
 mv .bashrc_userpbx .bashrc
 chown -R userpbx:userpbx /home/userpbx/.bashrc
 cd /root
 rm -R .bashrc
-wget https://raw.github.com/itcomputer/server-phone/master/.bashrc_root
+wget http://www.itc-informatique.fr/ITCPBX/.bashrc_root
 mv .bashrc_root .bashrc
 chown -R root:root /root/.bashrc
 cd /etc/skel
 rm -R .bashrc
-wget https://raw.github.com/itcomputer/server-phone/master/.bashrc_skel
+wget http://www.itc-informatique.fr/ITCPBX/.bashrc_skel
 mv .bashrc_skel .bashrc
 chown -R root:root /etc/skel/.bashrc
 cd /etc
 rm -R reset-network
-wget https://raw.github.com/itcomputer/server-phone/master/reset-network
+wget http://www.itc-informatique.fr/ITCPBX/reset-network
 chown -R userpbx:userpbx /etc/reset-network
 
 echo "Modification des fichiers de configuration"
 sleep 2
 cd /etc/asterisk
 rm -R info-port.conf
-wget https://raw.github.com/itcomputer/server-phone/master/info-port.conf
+wget http://www.itc-informatique.fr/ITCPBX/info-port.conf
 chown -R userpbx:userpbx /etc/asterisk/info-port.conf
 cd /usr/local/bin
 rm -R afficher-ip
-wget https://raw.github.com/itcomputer/server-phone/master/afficher-ip
+wget http://www.itc-informatique.fr/ITCPBX/afficher-ip
 chown -R root:root /usr/local/bin/afficher-ip
 chmod +x /usr/local/bin/afficher-ip
 cd /var/spool/cron/crontabs
 rm -R root
-wget https://raw.github.com/itcomputer/server-phone/master/root
+wget http://www.itc-informatique.fr/ITCPBX/root
 
 echo "Firmware et Langues Cisco"
 sleep 2
@@ -80,7 +80,7 @@ cd /var/www/html
 mkdir cisco
 cd cisco
 rm -R cisco.tar
-wget http://www.itc-informatique.fr/sysprep/cisco.tar
+wget http://www.itc-informatique.fr/ITCPBX/cisco.tar
 tar -xvf cisco.tar
 rm -R cisco.tar
 
@@ -110,40 +110,40 @@ sleep 2
 # configuration Fail2Ban
 cd /etc/fail2ban/filter.d/
 rm -R asterisk.conf
-wget https://raw.github.com/itcomputer/server-phone/master/asterisk.conf
+wget http://www.itc-informatique.fr/ITCPBX/asterisk.conf
 cd /etc/fail2ban/
 rm -R jail.conf
-wget https://raw.github.com/itcomputer/server-phone/master/jail.conf
+wget http://www.itc-informatique.fr/ITCPBX/jail.conf
 rm -R jail.local
-wget https://raw.github.com/itcomputer/server-phone/master/jail.local
+wget http://www.itc-informatique.fr/ITCPBX/jail.local
 cd /etc/asterisk/
 rm -R logger.conf
-wget https://raw.github.com/itcomputer/server-phone/master/logger.conf
+wget http://www.itc-informatique.fr/ITCPBX/logger.conf
 asterisk -rx "logger reload"
 /etc/init.d/fail2ban restart
 cd /etc/ssh/
 rm -R ssh_config
-wget https://raw.github.com/itcomputer/server-phone/master/ssh_config
+wget http://www.itc-informatique.fr/ITCPBX/ssh_config
 rm -R sshd_config
-wget https://raw.github.com/itcomputer/server-phone/master/sshd_config
+wget http://www.itc-informatique.fr/ITCPBX/sshd_config
 service ssh restart
 cd /lib/ufw
 rm -R user.rules
 rm -R user6.rules
-wget https://raw.github.com/itcomputer/server-phone/master/user6.rules
-wget https://raw.github.com/itcomputer/server-phone/master/user.rules
+wget http://www.itc-informatique.fr/ITCPBX/user6.rules
+wget http://www.itc-informatique.fr/ITCPBX/user.rules
 cd /etc/network/if-pre-up.d/
 rm -R iptables
-wget https://raw.github.com/itcomputer/server-phone/master/iptables
+wget http://www.itc-informatique.fr/ITCPBX/iptables
 chmod +x /etc/network/if-pre-up.d/iptables
 cd /etc/
 rm -R iptables.up.rules
-wget https://raw.github.com/itcomputer/server-phone/master/iptables.up.rules
+wget http://www.itc-informatique.fr/ITCPBX/iptables.up.rules
 
 #MAJ Securité désactivé
 #cd /root
 #rm -R security_iptables
-#wget https://raw.github.com/itcomputer/server-phone/master/security_iptables
+#wget http://www.itc-informatique.fr/ITCPBX/security_iptables
 #chmod +x security_iptables
 #./security_iptables
 

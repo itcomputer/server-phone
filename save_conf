@@ -1,5 +1,5 @@
 # Script de sauvegarde de la configuration ITCPBX - By LAUNAY Alexis
-# MAJ: 13/12/2013
+# MAJ: 15/06/2014
 
 # ALLER DANS LE REPERTOIRE /home/user pour ne pas saturer la partition systeme.
 cd /home/userpbx/

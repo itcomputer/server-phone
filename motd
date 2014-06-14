@@ -1,13 +1,15 @@
 ========================================================
-=                       Version: 1.0.6                =
+=                       Version: 1.1 BETA              =
 ========================================================
-= MAJ le 30/12/13 de LAUNAY Alexis, SOCIETE ITCOMPUTER =
+= MAJ le 13/06/14 de LAUNAY Alexis, SOCIETE ITCOMPUTER =
 ========================================================
 
 -----------------------------------------------------------------------------
 Commandes       Autorisations   Descriptions
 -----------------------------------------------------------------------------
 info-itcpbx                     Information serial number.
+info-sys                        Information sur la version du systeme.
+version-maj                     Information sur les maj.
 maj-pbxitc              #       Mettre a jours le serveur ITCPBX.
 maj-securite            #       Mettre a jours la securite du serveur ITCPBX.
 config-maj              #       Configuration des horaires de MAJ.
@@ -31,6 +33,8 @@ config-users            #       Editer le fichier users.
 config-sip              #       Editer le fichier sip.
 config-voicemail        #       Editer le fichier voicemail.
 config-music            #       Editer le fichier musiconhold.
+config-mail             #       Configuration serveur mail pour message alerte.
+test-mail                       Test mail sur info@itcomputer.fr
 restart-asterisk        #       Redemarrer les services Asterisk.
 parefeu-on              #       Activer le Pare-feu.
 parefeu-off             #       Desctiver le Pare-feu.
@@ -47,36 +51,4 @@ stop-itcpbx                     Arret du serveur ITCPBX.
 -----------------------------------------------------------------------------
 LEGENDE: # Vous devez vous connecter avec les droits Administrateur pour
 utiliser les commandes.
------------------------------------------------------------------------------
-MAJ: 0.9.3   = Compatible FreeBox Revoltion
-MAJ: 0.9.4   = Compatible Bouygues Bbox Sensation
-MAJ: 0.9.5   = Compatible DartyBox
-               Commande pour redemarrer les services asterisk
-MAJ: 0.9.6   = Compatible Orange Livebox/Livebox Pro (V3)
-MAJ: 0.9.7   = Correction stabilite
-MAJ: 0.9.7.1 = Amelioration du systeme de MAJ + test
-MAJ: 0.9.7.2 = Modification reseau + commande reset réseau
-MAJ: 1.0     = Version finale plus en Beta
-MAJ: 1.0.1   = Commande pour interface reseau
-MAJ: 1.0.2   = Modification des ports a ouvrir
-MAJ: 1.0.3   = Correction commande reset-network
-MAJ: 1.0.4   = musique libre, firmware et langues Cisco
-               page web, module apache2.
-MAJ: 1.0.5   = Correction securite, correction stabilite,
-               commande info-itcpbx et info-parefeu
-MAJ: 1.0.5a  = Correction commande config-voicemail et correction date et heure
-               Info IP au chargement, frequence CPU a 944MHz
-               commande terminal et maj-securite.
-MAJ: 1.0.5b  = Correction des regles de securite.
-               Commandes recovery-parefeu, save-parefeu et log-itcpbx.
-               FreePBX: Username ITCPBX Password itcpassword.
-MAJ: 1.0.5c  = Commande config-maj et MAJ auto chaque dimanche a minuit.
-MAJ: 1.0.6   = Version commerciale de l'ITCPBX
-               Commandes cryptages et commande test_sd
-               Amelioration du pare-feu
-               Musiques d'attentes libre de droit sous licences CC
-                              1) Nicolas Falcon - What I Know About You
-                              2) Josh Woodward - Stars Collide
-                              3) Musetta - Ophelias Song
-               Sauvegarde et restauration de la configuration
 -----------------------------------------------------------------------------

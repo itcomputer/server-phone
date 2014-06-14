@@ -27,6 +27,8 @@ rm -R /home/userpbx/save_config.tar.gz
 echo "MAJ Systeme"
 sleep 2
 sudo apt-get update && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade
+# MAJ Raspbx
+#raspbx-upgrade
 
 echo "Modification version et message d'accueil SSH"
 sleep 2

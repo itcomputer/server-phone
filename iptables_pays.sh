@@ -21,7 +21,7 @@ EGREP=/bin/egrep
 ### No editing below ###
 SPAMLIST="countrydrop"
 ZONEROOT="/root/iptables"
-DLROOT="http://www.itc-informatique.fr/ITCPBX/iptables"
+DLROOT="http://www.itc-informatique.fr/ITCPBX/iptables_doc"
 
 cleanOldRules(){
 $IPT -F

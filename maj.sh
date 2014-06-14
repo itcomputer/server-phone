@@ -18,7 +18,7 @@ sudo rm /home/.Trash-0/files/*
 sudo rm -R /home/.Trash-0/files/*
 sudo rm ~/.local/share/Trash/files/*
 sudo rm -R ~/.local/share/Trash/files/*
-tar -cvzf save_config.tar.gz /etc/ppp/chap-secrets /etc/pptpd.conf /etc/fail2ban/filtrer.d/ /etc/fail2ban/jail.conf /etc/init.d/firewall /var/www/html/admin/modules/core/etc/ /etc/asterisk/users.conf /etc/asterisk/voicemail.conf /var/lib/asterisk/sounds/ --exclude=/var/lib/asterisk/sounds/custom --exclude=/var/lib/asterisk/sounds/en --exclude=/var/lib/asterisk/sounds/fr /etc/iptables.up.rules /var/spool/cron/crontabs/root
+tar -cvzf save_config.tar.gz /etc/network/interfaces /etc/ppp/chap-secrets /etc/pptpd.conf /etc/fail2ban/filtrer.d/ /etc/fail2ban/jail.conf /etc/init.d/firewall /var/www/html/admin/modules/core/etc/ /etc/asterisk/users.conf /etc/asterisk/voicemail.conf /var/lib/asterisk/sounds/ --exclude=/var/lib/asterisk/sounds/custom --exclude=/var/lib/asterisk/sounds/en --exclude=/var/lib/asterisk/sounds/fr /etc/iptables.up.rules /var/spool/cron/crontabs/root
 mkdir /var/www/html/sauvegarde
 rm -R /var/www/html/sauvegarde/save_config.tar.gz
 mv /home/userpbx/save_config.tar.gz /var/www/html/sauvegarde/

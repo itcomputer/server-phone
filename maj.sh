@@ -1,17 +1,32 @@
-#!/bin/bash
-#Script de MAJ pour l'IPBX d'ITC
-#Alexis LAUNAY configuration ITC.
-#Site internet: www.itcomputer.fr
-## MAJ Version 1.0.5c le 30/11/2013
+#! /bin/sh
+### BEGIN INIT INFO
+# Provides: MAJ
+# Required-Start: dbus mountall
+# Required-Stop:
+# Should-Start:
+# Should-Stop:
+# Default-Start: started dbus and started mountall
+# Default-Stop: 2 3 4 5
+# Short-Description: Start and stop MAJ
+# Description: MAJ pour la version 1.1
+### END INIT INFO
 
-#Installation d'un serveur VNC
-#MAJ + Dépendances
-
-echo "MAJ de raspbx"
+echo "SAUVEGARDE DES FICHIERS DE CONFIGURATION"
 sleep 2
-#mv /root/pptpd-options /etc/ppp/pptpd-options
-#mv /root/sysctl.conf /etc/sysctl.conf
-#sysctl -p
+cd /home/userpbx/
+sudo rm /home/.Trash-0/files/*
+sudo rm -R /home/.Trash-0/files/*
+sudo rm ~/.local/share/Trash/files/*
+sudo rm -R ~/.local/share/Trash/files/*
+tar -cvzf save_config.tar.gz /etc/ppp/chap-secrets /etc/pptpd.conf /etc/fail2ban/filtrer.d/ /et$
+mkdir /var/www/html/sauvegarde
+rm -R /var/www/html/sauvegarde/save_config.tar.gz
+mv /home/userpbx/save_config.tar.gz /var/www/html/sauvegarde/
+rm -R /home/userpbx/save_config.tar.gz
+
+echo "MAJ Systeme"
+sleep 2
+sudo apt-get update && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade
 
 echo "Modification version et message d'accueil SSH"
 sleep 2
@@ -57,83 +72,13 @@ cd /var/spool/cron/crontabs
 rm -R root
 wget https://raw.github.com/itcomputer/server-phone/master/root
 
-echo "Installation des dépendances"
-sleep 2
-apt-get -y install ntpdate
-ntpdate pool.ntp.org
-#apt-get -y install build-essential
-#apt-get -y install libxml2-dev
-#apt-get -y install libncurses5-dev
-#apt-get -y install linux-headers-`uname -r`
-#apt-get -y install libsqlite3-dev
-#apt-get -y install libssl-dev perl
-#apt-get -y install libwww-perl
-#apt-get -y install sox mpg123
-#apt-get -y install zip
-#apt-get -y install pptpd
-#apt-get -y install openvpn
-#apt-get -y install tightvncserver
-#apt-get -y install ufw
-#apt-get -y install gufw
-#apt-get -y install fbi
-
-# verification des dépendances.
-#apt-get -y install build-essential libxml2-dev libncurses5-dev linux-headers-`uname -r` libsqlite3-dev libssl-dev perl libwww-perl sox mpg123 zip pptpd openvpn tightvncserver ufw gufw fbi
-
-
-echo "Installation de No-IP"
-sleep 2
-
-
-echo "Copie des fichiers de configuration Asterisk"
-sleep 2
-#cd /etc/asterisk/
-#rm extensions.conf
-#mv /root/sip.conf /var/www/html/admin/modules/core/etc
-#mv /root/extensions.conf /var/www/html/admin/modules/core/etc
-#mv /root/voicemail.conf /var/www/html/admin/modules/core/etc
-#mv /root/users.conf /var/www/html/admin/modules/core/etc
-#mv /root/musiconhold.conf /var/www/html/admin/modules/core/etc
-#chown -R asterisk:asterisk /var/www/html/admin/modules/core/etc
-#mv /root/voicemail.conf /etc/asterisk
-#mv /root/users.conf /etc/asterisk
-#mv /root/musiconhold.conf /etc/asterisk
-#chown -R asterisk:asterisk /etc/asterisk
-#mv /root/fr /var/lib/asterisk/sounds/
-#mv /root/itc.mp3 /var/lib/asterisk/sounds
-#mv /root/IVR-000.ulaw /var/lib/asterisk/sounds
-#mv /root/IVR-001.ulaw /var/lib/asterisk/sounds
-#mv /root/IVR-002.ulaw /var/lib/asterisk/sounds
-#mv /root/IVR-003.ulaw /var/lib/asterisk/sounds
-#mv /root/IVR-004.ulaw /var/lib/asterisk/sounds
-#mv /root/IVR-005.ulaw /var/lib/asterisk/sounds
-#mv /root/IVR-006.ulaw /var/lib/asterisk/sounds
-#chown -R asterisk:asterisk /var/lib/asterisk/sounds
-
-echo "MAJ"
-sleep 2
-cd /var/www/html
-rm -R itcpbx_site.png
-wget http://www.roks.fr/sysprep/itcpbx_site.png
-rm -R index.php
-wget https://raw.github.com/itcomputer/server-phone/master/index.php
-cd /var/lib/asterisk/sounds
-rm -R itc.mp3
-wget http://www.roks.fr/sysprep/itc.mp3
-
-echo "MAJ"
-sleep 2
-aptitude -y install libapache2-mod-geoip
-a2enmod geoip
-
-
 echo "Firmware et Langues Cisco"
 sleep 2
 cd /var/www/html
 mkdir cisco
 cd cisco
 rm -R cisco.tar
-wget http://www.roks.fr/sysprep/cisco.tar
+wget http://www.itc-informatique.fr/sysprep/cisco.tar
 tar -xvf cisco.tar
 rm -R cisco.tar
 
@@ -192,7 +137,6 @@ chmod +x /etc/network/if-pre-up.d/iptables
 cd /etc/
 rm -R iptables.up.rules
 wget https://raw.github.com/itcomputer/server-phone/master/iptables.up.rules
-#apt-get -y install rkhunter
 
 #MAJ Securité désactivé
 #cd /root
@@ -200,6 +144,13 @@ wget https://raw.github.com/itcomputer/server-phone/master/iptables.up.rules
 #wget https://raw.github.com/itcomputer/server-phone/master/security_iptables
 #chmod +x security_iptables
 #./security_iptables
+
+echo "Restauration des fichiers de configuration"
+sleep 2
+cd /
+cp /var/www/html/sauvegarde/save_config.tar.gz save_config.tar.gz
+tar zxvf save_config.tar.gz
+rm -R save_config.tar.gz
 
 echo "Redémarrage du serveur..."
 sleep 2

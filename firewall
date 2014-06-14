@@ -1,5 +1,15 @@
-#!/bin/sh
-# description: Pare-feu ITCPBX 1.0
+#! /bin/sh
+### BEGIN INIT INFO
+# Provides: Firewall
+# Required-Start: dbus mountall
+# Required-Stop:
+# Should-Start:
+# Should-Stop:
+# Default-Start: started dbus and started mountall
+# Default-Stop: 2 3 4 5
+# Short-Description: Start and stop Firewall
+# Description: Firewall
+### END INIT INFO
 
 
 IPT=/sbin/iptables
@@ -27,6 +37,9 @@ $IPT -A LOG_DROP -j REJECT
 
 # host a bannir
 #$IPT -A INPUT -i eth3 -p tcp --source IP_EXTERIEUR -j DROP
+#$IPT -A INPUT -i eth1 -p tcp --source IP_EXTERIEUR -j DROP
+#$IPT -A INPUT -i eth2 -p tcp --source IP_EXTERIEUR -j DROP
+#$IPT -A INPUT -i eth4 -p tcp --source IP_EXTERIEUR -j DROP
 
 
 # on autorise tout ce qui vient du subnet, a adapter pour vous.
@@ -53,7 +66,13 @@ $IPT -A INPUT -p udp -m udp --dport 5060 -m string --string "Cirpack KeepAlive P
 # pour le port 5060 on autorise uniquement certaines ips
 # Tout le subnet, a dapter pour VOTRE config
 $IPT -A INPUT -s 192.168.1.0/24 -i eth3 -p udp --dport 5060 -j ACCEPT
-$IPT -A INPUT -s 192.168.12.0/24 -i eth3 -p udp --dport 5060 -j ACCEPT
+$IPT -A INPUT -s 192.168.2.0/24 -i eth3 -p udp --dport 5060 -j ACCEPT
+$IPT -A INPUT -s 192.168.1.0/24 -i eth2 -p udp --dport 5060 -j ACCEPT
+$IPT -A INPUT -s 192.168.2.0/24 -i eth2 -p udp --dport 5060 -j ACCEPT
+$IPT -A INPUT -s 192.168.1.0/24 -i eth1 -p udp --dport 5060 -j ACCEPT
+$IPT -A INPUT -s 192.168.2.0/24 -i eth1 -p udp --dport 5060 -j ACCEPT
+$IPT -A INPUT -s 192.168.1.0/24 -i eth4 -p udp --dport 5060 -j ACCEPT
+$IPT -A INPUT -s 192.168.2.0/24 -i eth4 -p udp --dport 5060 -j ACCEPT
 
 
 #on autorise certains fournisseurs sip
@@ -62,10 +81,23 @@ $IPT -A INPUT -s sip.ovh.net -i eth3 -p udp --dport 5060 -j ACCEPT
 $IPT -A INPUT -s freephonie.net -i eth3 -p udp --dport 5060 -j ACCEPT
 $IPT -A INPUT -s 78.246.111.201 -i eth3 -p udp --dport 5060 -j ACCEPT
 $IPT -A INPUT -s 78.246.111.201 -i eth3 -p tcp --dport 5060 -j ACCEPT
-
+$IPT -A INPUT -s sip.ovh.net -i eth2 -p udp --dport 5060 -j ACCEPT
+$IPT -A INPUT -s freephonie.net -i eth2 -p udp --dport 5060 -j ACCEPT
+$IPT -A INPUT -s 78.246.111.201 -i eth2 -p udp --dport 5060 -j ACCEPT
+$IPT -A INPUT -s 78.246.111.201 -i eth2 -p tcp --dport 5060 -j ACCEPT
+$IPT -A INPUT -s sip.ovh.net -i eth1 -p udp --dport 5060 -j ACCEPT
+$IPT -A INPUT -s freephonie.net -i eth1 -p udp --dport 5060 -j ACCEPT
+$IPT -A INPUT -s 78.246.111.201 -i eth1 -p udp --dport 5060 -j ACCEPT
+$IPT -A INPUT -s 78.246.111.201 -i eth1 -p tcp --dport 5060 -j ACCEPT
+$IPT -A INPUT -s sip.ovh.net -i eth4 -p udp --dport 5060 -j ACCEPT
+$IPT -A INPUT -s freephonie.net -i eth4 -p udp --dport 5060 -j ACCEPT
+$IPT -A INPUT -s 78.246.111.201 -i eth4 -p udp --dport 5060 -j ACCEPT
+$IPT -A INPUT -s 78.246.111.201 -i eth4 -p tcp --dport 5060 -j ACCEPT
 
 $IPT -A INPUT -i eth3 -p udp -m udp --dport 10000:20000 -j ACCEPT
-
+$IPT -A INPUT -i eth1 -p udp -m udp --dport 10000:20000 -j ACCEPT
+$IPT -A INPUT -i eth2 -p udp -m udp --dport 10000:20000 -j ACCEPT
+$IPT -A INPUT -i eth4 -p udp -m udp --dport 10000:20000 -j ACCEPT
 
 # Le reste est fonction de votre config, juste pour info
 # si vous autorisez le subnetlocal, juste ssh est necessaire normalement.
@@ -73,13 +105,24 @@ $IPT -A INPUT -i eth3 -p udp -m udp --dport 10000:20000 -j ACCEPT
 # on pourra limiter l'acces ssh a certaines ips avec la meme methode que ci dessus
 $IPT -A INPUT -i eth3 -m state --state ESTABLISHED,RELATED -j ACCEPT
 $IPT -A INPUT -i eth3 -p tcp --dport 6070 -j ACCEPT
-
+$IPT -A INPUT -i eth1 -m state --state ESTABLISHED,RELATED -j ACCEPT
+$IPT -A INPUT -i eth1 -p tcp --dport 6070 -j ACCEPT
+$IPT -A INPUT -i eth2 -m state --state ESTABLISHED,RELATED -j ACCEPT
+$IPT -A INPUT -i eth2 -p tcp --dport 6070 -j ACCEPT
+$IPT -A INPUT -i eth4 -m state --state ESTABLISHED,RELATED -j ACCEPT
+$IPT -A INPUT -i eth4 -p tcp --dport 6070 -j ACCEPT
 
 #ping
 $IPT -A INPUT -i eth3 -p icmp -j ACCEPT
+$IPT -A INPUT -i eth1 -p icmp -j ACCEPT
+$IPT -A INPUT -i eth2 -p icmp -j ACCEPT
+$IPT -A INPUT -i eth4 -p icmp -j ACCEPT
 
 # on rejette tout les autres
 $IPT -A INPUT -i eth3 -j LOG_DROP
+$IPT -A INPUT -i eth1 -j LOG_DROP
+$IPT -A INPUT -i eth2 -j LOG_DROP
+$IPT -A INPUT -i eth4 -j LOG_DROP
 }
 
 case "$1" in

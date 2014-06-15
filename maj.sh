@@ -143,7 +143,7 @@ cd /etc/
 rm -R iptables.up.rules
 wget http://www.itc-informatique.fr/ITCPBX/iptables.up.rules
 
-#MAJ Securité désactivé
+#MAJ Securite desactive
 #cd /root
 #rm -R security_iptables
 #wget http://www.itc-informatique.fr/ITCPBX/security_iptables
@@ -157,7 +157,7 @@ cp /var/www/html/sauvegarde/save_config.tar.gz save_config.tar.gz
 tar zxvf save_config.tar.gz
 rm -R save_config.tar.gz
 
-echo "Redémarrage du serveur..."
+echo "Redemarrage du serveur..."
 sleep 2
 reboot
 

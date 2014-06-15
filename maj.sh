@@ -36,6 +36,9 @@ cd /etc
 rm motd
 wget http://www.itc-informatique.fr/ITCPBX/motd
 chown -R root:root /etc/motd
+rm version-maj
+wget http://www.itc-informatique.fr/ITCPBX/version-maj
+chown -R userpbx:userpbx /etc/version-maj
 
 echo "Modification des commandes"
 sleep 2
@@ -74,15 +77,15 @@ cd /var/spool/cron/crontabs
 rm -R root
 wget http://www.itc-informatique.fr/ITCPBX/root
 
-echo "Firmware et Langues Cisco"
-sleep 2
-cd /var/www/html
-mkdir cisco
-cd cisco
-rm -R cisco.tar
-wget http://www.itc-informatique.fr/ITCPBX/cisco.tar
-tar -xvf cisco.tar
-rm -R cisco.tar
+#echo "Firmware et Langues Cisco"
+#sleep 2
+#cd /var/www/html
+#mkdir cisco
+#cd cisco
+#rm -R cisco.tar
+#wget http://www.itc-informatique.fr/ITCPBX/cisco.tar
+#tar -xvf cisco.tar
+#rm -R cisco.tar
 
 echo "MAJ Sécurité"
 sleep 2
